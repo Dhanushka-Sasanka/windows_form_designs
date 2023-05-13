@@ -28,34 +28,71 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			label1 = new Label();
+			mainPanel = new Panel();
+			flowLayoutPanel1 = new FlowLayoutPanel();
+			button1 = new Button();
+			button2 = new Button();
+			flowLayoutPanel1.SuspendLayout();
 			SuspendLayout();
 			// 
-			// label1
+			// mainPanel
 			// 
-			label1.AutoSize = true;
-			label1.FlatStyle = FlatStyle.Popup;
-			label1.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-			label1.Location = new Point(251, 22);
-			label1.Name = "label1";
-			label1.Size = new Size(133, 23);
-			label1.TabIndex = 0;
-			label1.Text = "DASHBOARD";
+			mainPanel.Location = new Point(210, 56);
+			mainPanel.Name = "mainPanel";
+			mainPanel.Size = new Size(670, 390);
+			mainPanel.TabIndex = 1;
+			// 
+			// flowLayoutPanel1
+			// 
+			flowLayoutPanel1.Controls.Add(button1);
+			flowLayoutPanel1.Controls.Add(button2);
+			flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+			flowLayoutPanel1.Location = new Point(0, 53);
+			flowLayoutPanel1.Name = "flowLayoutPanel1";
+			flowLayoutPanel1.Size = new Size(204, 410);
+			flowLayoutPanel1.TabIndex = 4;
+			// 
+			// button1
+			// 
+			button1.FlatStyle = FlatStyle.Popup;
+			button1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+			button1.Location = new Point(3, 3);
+			button1.Name = "button1";
+			button1.Size = new Size(201, 45);
+			button1.TabIndex = 0;
+			button1.Text = "DASHBOARD";
+			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click;
+			// 
+			// button2
+			// 
+			button2.FlatStyle = FlatStyle.Popup;
+			button2.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+			button2.Location = new Point(3, 54);
+			button2.Name = "button2";
+			button2.Size = new Size(201, 45);
+			button2.TabIndex = 1;
+			button2.Text = "EMPLOYEE   ";
+			button2.UseVisualStyleBackColor = true;
+			button2.Click += button2_Click_1;
 			// 
 			// Dashboard
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(644, 464);
-			Controls.Add(label1);
+			ClientSize = new Size(893, 463);
+			Controls.Add(flowLayoutPanel1);
+			Controls.Add(mainPanel);
 			Name = "Dashboard";
 			Text = "Dashboard";
+			flowLayoutPanel1.ResumeLayout(false);
 			ResumeLayout(false);
-			PerformLayout();
 		}
 
 		#endregion
-
-		private Label label1;
+		private Panel mainPanel;
+		private FlowLayoutPanel flowLayoutPanel1;
+		private Button button1;
+		private Button button2;
 	}
 }
